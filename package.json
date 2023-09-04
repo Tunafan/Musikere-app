@@ -1,0 +1,14 @@
+{
+  "name": "lars",
+  "version": "1.0.0",
+  "description": "folder of the back end",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {},
+  "author": "Lars",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2"
+  }
+}
