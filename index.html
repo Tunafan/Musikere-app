@@ -8,7 +8,29 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>HVAD ER OPPE, MUSIC LOVER</header>
+    <h1>LARGO MUSICS
+        <h4>HVAD ER OPPE, MUSIC LOVER</h4>
+    </h1>
+    
+    <nav>------- Find din ting i menuen her ---->
+        <div> <label for="searchBar">Find artist</label>
+            <div id="searchAndFilter"></div>
+            <div>
+          <label for="searchBar">Search -</label>
+           <input type="search" id="searchBar" name="searchBar" placeholder="Navn"/>
+        </div>
+        <div>
+          <label for="showOnly">Filter</label>
+           <select name="showOnly" id="showOnly">
+            <option value="none">Alle</option>
+            <option value="favourites">Favoritter</option>
+          </select>
+        </div>
+       
+        </div>
+    </nav>
+
+
     <script src="app.js"></script>
 </body>
 </html>
