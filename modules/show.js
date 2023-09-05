@@ -1,8 +1,9 @@
-import {showDeleteDialog} from "../dialogs/deleteDialog.js";
-import {showUpdateDialog} from "../dialogs/updateDialog.js";
-import {showDetailDialog} from "../dialogs/detailDialog.js";
-import {getMusicians, endpoint} from "../../main.js";
-import {addLike, removeLike} from "../likes/like.js";
+"use strict"
+// import {showDeleteDialog} from "../dialogs/deleteDialog.js";
+// import {showUpdateDialog} from "../dialogs/updateDialog.js";
+// import {showDetailDialog} from "../dialogs/detailDialog.js";
+import {getMusicians, endpoint} from "./app.js";
+// import {addLike, removeLike} from "../likes/like.js";
 
 /* ========== Musician Array ========== */
 export let musicianArr;

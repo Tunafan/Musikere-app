@@ -1,10 +1,12 @@
 "use strict"
 
+import { updateGrid } from "./show.js";
+
 window.addEventListener("load", main)
 
 
 // ----------- * globale variabler * -----------
-const endpoint = "taytay-ride-or-die.com"
+export const endpoint = "taytay-ride-or-die.com"
 
 
 async function main(){
@@ -34,7 +36,7 @@ await updateGrid();
         .addEventListener("change", filterByFav);
 }
 // ========== CREATE ========== */
-export async function addMusician(musicianObj, endpoint) {
+ export async function addMusician(musicianObj, endpoint) {
     const response = await fetch(`${endpoint}/musicians.json`, {
         method: "POST",
         body: JSON.stringify(musicianObj),
@@ -48,7 +50,7 @@ export async function addMusician(musicianObj, endpoint) {
     }
 }
 /* ========== READ ALL========== */
-export async function getMusicians(endpoint) {
+ export async function getMusicians(endpoint) {
     const response = await fetch(`${endpoint}/musicians.json`);
     if(response.ok){
         const data = await response.json();
@@ -60,7 +62,7 @@ export async function getMusicians(endpoint) {
     }
 }
 /* ========== Data preparation for getMusicians ========== */
-function prepareData(obj) {
+export function prepareData(obj) {
     const dataArr = [];
     for (const key in obj) {
         const musician = obj[key];
@@ -70,7 +72,7 @@ function prepareData(obj) {
     return dataArr;
 }
 /* ========== READ ONE ========== */
-export async function getOneMusician(musicianID, endpoint) {
+ export async function getOneMusician(musicianID, endpoint) {
     const response = await fetch(`${endpoint}musicians/${musicianID}.json`);
     if (response.ok) {
         const musician = await response.json();
@@ -84,7 +86,7 @@ export async function getOneMusician(musicianID, endpoint) {
 }
 /* ========== UPDATE ========== */
 // Sends put request to endpoint with musician object
-export async function updateMusician(musician, musicianID, endpoint) {
+ export async function updateMusician(musician, musicianID, endpoint) {
     const response = await fetch(`${endpoint}musicians/${musicianID}.json`, {
     method: "PUT",
     headers: { "Content-Type": "application/json" },
@@ -100,7 +102,7 @@ export async function updateMusician(musician, musicianID, endpoint) {
 }
 
 /* ========== DELETE ========== */
-export async function deleteMusician(musicianID, endpoint) {
+ export async function deleteMusician(musicianID, endpoint) {
     const response = await fetch(`${endpoint}/musicians/${musicianID}.json`, {
         method: "DELETE",
     });
@@ -112,4 +114,4 @@ export async function deleteMusician(musicianID, endpoint) {
         showToastMessage(`Oops something went wrong. ${response.status} ${response.statusText}.`, "error");
         console.error(`Bad response at deletemusician: ${response.status} ${response.statusText}.`);
     }
-}
+};
