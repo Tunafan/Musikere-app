@@ -1,3 +1,10 @@
 body {
+   
    background-color: lightcoral;
+   padding: 1vw;
+}
+
+#musicians-grid{
+  display: grid;
+   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; 
 }
