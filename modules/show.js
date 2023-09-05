@@ -1,9 +1,9 @@
 "use strict"
-// import {showDeleteDialog} from "../dialogs/deleteDialog.js";
-// import {showUpdateDialog} from "../dialogs/updateDialog.js";
-// import {showDetailDialog} from "../dialogs/detailDialog.js";
+import {showDeleteDialog} from "./deleteDialog.js";
+import {showUpdateDialog} from "./updateDialog.js";
+import {showDetailDialog} from "./detailDialog.js";
 import {getMusicians, endpoint} from "./app.js";
-// import {addLike, removeLike} from "../likes/like.js";
+import {addLike, removeLike} from "./like.js";
 
 /* ========== Musician Array ========== */
 export let musicianArr;
@@ -24,16 +24,19 @@ export function showMusicians(musicianArr) {
 
 /* ========== SHOW Musician ========== */
 export function showMusician(musicianObj) {
+    console.log(musicianObj);
     const musicianGridContainer = document.querySelector("#musicianGrid");
     const myHTML = /*html*/ `
         <article id="grid-item">
             <div>
-                <div class="image-div" style="background-image: url(${musicianObj.image})"></div>
+                <div class="image-div" style="background-image: url(${musicianObj.image}"></div>
                     <h2>${musicianObj.name}</h2>
-                    <p>${musicianObj.genre}</p>
-                    <p>${musicianObj.albums}</p>
-                    <p>${musicianObj.activeSince}</p>
-                    <p>${musicianObj.age} years old ${(MusicianObj.gender==="male")?"stallion":"mare"}</p>
+                    <img src=${musicianObj.image} id="musicianImage">
+                    <p>Fulde navn - ${musicianObj.fullName}</p>
+                    <p>Genrer - ${musicianObj.genre}</p>
+                    <p id="releasedAlbums">Plader - ${musicianObj.albums}</p>
+                    <p>Har lavet musik siden ${musicianObj.activeSince}</p>
+                    <p>Født ${musicianObj.dateOfBirth}</p>
                 </div>
             <div class="grid-item-btns">
                 <span class="hidden musicianID">${musicianObj.id}</span>

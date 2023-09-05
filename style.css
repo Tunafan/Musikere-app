@@ -8,3 +8,8 @@ body {
   display: grid;
    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; 
 }
+
+#musicianImage{
+   max-width: 16vw;
+
+}

@@ -1,12 +1,15 @@
 "use strict"
 
+import { showCreateDialog } from "./createDialog.js";
+import { closeDeleteDialog } from "./deleteDialog.js";
+import { inputSearchChanged } from "./search.js";
 import { updateGrid } from "./show.js";
 
 window.addEventListener("load", main)
 
 
 // ----------- * globale variabler * -----------
-export const endpoint = "taytay-ride-or-die.com"
+export const endpoint = `./db/`
 
 
 async function main(){

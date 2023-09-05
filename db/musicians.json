@@ -1,0 +1,12 @@
+{
+    "musicians": {
+        "id":           "01",
+        "name":         "Rosalía",
+        "fullName":     "Rosalia Vila Tobella",
+        "genre":        "Pop, Reggaeton, Flamenco",
+        "image":        "https://www.rosalia.com/wp-content/uploads/2021/02/FMM.jpg",
+        "albums":       "Los Ángeles, El Mal Querer, Motomami",
+        "activeSince":  2016,
+        "dateOfBirth":  "25. september 1992"
+
+}}
