@@ -30,7 +30,7 @@
        
         </div>
     </nav>
-    <button id="add-musician-dialog-button">Add musician</button>
+    <button id="add-musician-dialog-button">Tilføj musiker</button>
 </header>
 <main>
 <section id="musicianGrid" class="grid-container"> Hey
@@ -40,86 +40,32 @@
 </main>
 <!-- ========== CREATE FORM ========== -->
       <dialog id="create-dialog">
-        <h2>Create Horse</h2>
+        <h2>Tilføj musiker 🎺</h2>
         <form action="" id="create-form">
           <fieldset>
-            <legend>Image</legend>
+            <legend>Bedle</legend>
             <label for="create-image">Image URL:*</label>
             <input type="url" name="image" id="create-image" placeholder="Image URL" required/>
           </fieldset>
           <div class="side-by-side">
-            <div>
-              <fieldset>
-                <legend>Owner Information</legend>
-                <label for="create-ownerName">Name:*</label>
-                <input type="text" name="ownerName" id="create-ownerName" placeholder="Owner Name" minlength="2" maxlength="40" required/>
-                <label for="create-ownerEmail">Email:*</label>
-                <input type="email" name="ownerEmail" id="create-ownerEmail" placeholder="Email" required/>
-                <label for="create-ownerPhone">Phone number:</label>
-                <input type="text" name="ownerPhone" id="create-ownerPhone" placeholder="Phone Number"/>
-              </fieldset>
-              <fieldset>
-                <legend>Good to know</legend>
-                <label for="create-temperament">Temperament:</label>
-                <select name="temperament" id="create-temperament">
-                  <option value="spirited">Spirited</option>
-                  <option value="calm">Calm</option>
-                  <option value="friendly">Friendly</option>
-                  <option value="wild">Wild</option>
-                  <option value="energetic">Energetic</option>
-                  <option value="gentle">Gentle</option>
-                  <option value="eager">Eager</option>
-                  <option value="playful">Playful</option>
-                </select>
-                <label for="create-trainingLevel">Training level:</label>
-                <select name="trainingLevel" id="create-trainingLevel">
-                  <option value="advanced">Advanced</option>
-                  <option value="intermediate">Intermediate</option>
-                  <option value="beginner">Beginner</option>
-                  <option value="untrained">Untrained</option>
-                  <option value="basic">Basic</option>
-                </select>
-                <label for="create-riderExperienceRequired">Rider experience</label>
-                <input type="checkbox" name="riderExperienceRequired" id="create-riderExperienceRequired"/>
-                <label for="create-registered">Registered</label>
-                <input type="checkbox" name="registered" id="create-registered"/>
-              </fieldset>
-            </div>
             <fieldset>
-              <legend>General Information</legend>
-              <label for="create-horseName">Name:*</label>
-              <input type="text" name="horseName" id="create-horseName" placeholder="Name of horse" required/>
-              <label for="create-age">Age:*</label>
-              <input type="number" step="any" min="0" max="500" name="age" id="create-age" placeholder="Age of horse" required/>
-              <label for="create-horseRace">Race:*</label>
-              <input type="text" name="horseRace" id="create-horseRace" placeholder="Race of horse" required/>
-              <label for="create-horseColor">Color:</label>
-              <input type="text" name="horseColor" id="create-horseColor" minlength="3" maxlength="20"/>
-              <label>Gender:*</label>
-              <div>
-                <label for="create-gender-male">Male</label>
-                <input type="radio" name="gender" id="create-gender-male" value="male" checked/>
-                <label for="create-gender-female">Female</label>
-                <input type="radio" name="gender" id="create-gender-female" value="female"/>
-              </div>
-              <label for="create-height">Height:</label>
-              <input type="number" step="any" min="0" max="100" name="height" id="create-height" placeholder="Height in feet"/>
-              <label for="create-topspeed">Top speed:</label>
-              <input type="number" step="any" min="0" max="200" name="topspeed" id="create-topspeed" placeholder="Top speed in mph"/>
+              <legend>Generel info</legend>
+              <label for="create-stageName">Kunstnernavn/Alter ego:</label>
+              <input type="text" name="name" id="create-stageName" placeholder="Stage name" />
+              <label for="create-DOB">Fødselsdato</label>
+              <input type="text" step="any" name="age" id="create-DOB" placeholder="DD/MM/YYYY" required/>
+              <label for="create-genres">Genrer:</label>
+              <input type="text" name="genre" id="create-genre" placeholder="Musical genres" required/>
+              <label for="create-musicLabel">Pladeselskaber:</label>
+              <input type="text" name="musicLabel" id="create-musicLabel" placeholder="Record labels" required/>
+              <label for="create-album">Albums:</label>
+              <input type="text" name="Album" id="create-album" placeholder="Albums"/>
+              <label for="create-height">Højde:</label>
+              <input type="number" step="any" min="0" max="300" name="height" id="create-height" placeholder="Height in centimeters"/>
+              <label for="create-height">Kendt for:</label>
+              <input type="text" name="known-for" id="create-knownFor" placeholder="Andre områder, musikeren har udfoldet sig"/>
             </fieldset>
           </div>
-          <fieldset>
-            <legend>Health and Diet</legend>
-            <label for="create-diet">Preferred Diet:</label>
-            <textarea name="diet" id="create-diet" minlength="2" maxlength="100" cols="10" rows="3" placeholder="Hay, Apples, Carrots,..."></textarea>
-            <label for="create-vaccinations">Vaccinations:</label>
-            <textarea name="vaccinations" id="create-vaccinations" minlength="2" maxlength="100" cols="10" rows="3" placeholder="Rabies, Tetanus, Influenza,..."></textarea>
-            <div></div>
-            <div>
-              <input type="checkbox" name="hasTapeworm" id="create-hasTapeworm"/>
-              <label for="create-hasTapeworm">Has tapeworm</label>
-            </div>
-          </fieldset>
           <div id="create-buttons">
             <button id="create-submit-btn">Submit</button>
             <button type="reset">Clear form</button>

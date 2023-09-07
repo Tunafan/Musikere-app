@@ -3,7 +3,7 @@
 import { showCreateDialog } from "./createDialog.js";
 import { closeDeleteDialog } from "./deleteDialog.js";
 import { inputSearchChanged } from "./search.js";
-import { updateGrid } from "./show.js";
+import { filterByFav, updateGrid } from "./show.js";
 
 window.addEventListener("load", main)
 
@@ -30,9 +30,6 @@ await updateGrid();
     document.querySelector("#delete-cancel-btn")
         .addEventListener("click", closeDeleteDialog);
 
-    // sort Musicians on change in sort menu */
-    document.querySelector("#sortBy")
-        .addEventListener("change", sortMusicians);
 
     // filter event listener */
     document.querySelector("#showOnly")
@@ -46,9 +43,9 @@ await updateGrid();
     });
     if (response.ok) {
         await updateGrid();
-        showToastMessage("musician added, nice", "success");
+        showToastMessage("Musician added, nice", "success");
     } else {
-        showToastMessage(`Oops something went wrong. ${response.status} ${response.statusText}.`, "error");
+        showToastMessage(`hov den er gal. ${response.status} ${response.statusText}.`, "error");
         console.error(`Bad response at addmusician: ${response.status} ${response.statusText}.`);
     }
 }
