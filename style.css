@@ -1,5 +1,5 @@
 body {
-   
+   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
    background-color: lightcoral;
    padding: 1vw;
 }
@@ -9,12 +9,55 @@ body {
    grid-template-columns: 1fr 1fr 1fr 1fr; 
 }
 
-.grid-item{
-padding: 100px;
+#grid-item{
+padding: 10px;
+outline: #EA4C89 solid 3px;
+text-align: center;
+}
+
+#grid-item:hover{
+   zoom: 130%;
+   box-shadow: 0px 0px 102px #EA4C89;
 }
 
 #musicianImage{
    max-width: 16vw;
 
+}
+
+.btn {
+  background-color: #EA4C89;
+  border-radius: 8px;
+  border-style: none;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  height: 40px;
+  line-height: 20px;
+  list-style: none;
+  margin: 0;
+  outline: none;
+  padding: 10px 16px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: color 100ms;
+  vertical-align: baseline;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.btn:hover,
+.btn:focus {
+  background-color: #F082AC;
+}
+
+footer{
+   text-align: center;
 }
 

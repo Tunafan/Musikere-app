@@ -40,10 +40,9 @@ export function showMusician(musicianObj) {
                 </div>
             <div class="grid-item-btns">
                 <span hidden class="hidden musicianID">${musicianObj.id}</span>
-                <button class="like-btn">Like(<span class="likes">${musicianObj.likes}</span>)</button>
-                <button class="dislike-btn">Dislike</button>
-                <button class="delete-btn">Delete</button>
-                <button class="edit-btn">Edit</button>
+                <button class="btn" id="favourite-btn">Favorit</button>
+                <button class="btn" id="delete-btn">Delete</button>
+                <button class="btn" id="edit-btn">Edit</button>
             </div>
         </article>`;
 
@@ -57,14 +56,14 @@ function addShowMusicianEventListeners(currentMusicianArticle, musicianObj) {
     currentMusicianArticle.addEventListener("click", () => showDetailDialog(musicianObj));
 
     //update button event listener
-    const updateButton = currentMusicianArticle.querySelector(".edit-btn");
+    const updateButton = currentMusicianArticle.querySelector("#edit-btn");
     updateButton.addEventListener("click", (event) => {
         event.stopPropagation();
         showUpdateDialog(musicianObj);
     });
 
     //delete button event listener
-    const deleteButton = currentMusicianArticle.querySelector(".delete-btn");
+    const deleteButton = currentMusicianArticle.querySelector("#delete-btn");
     deleteButton.addEventListener("click", showDeleteDialog);
 }
 

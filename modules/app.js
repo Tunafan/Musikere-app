@@ -37,9 +37,11 @@ await updateGrid();
 // ========== CREATE ========== */
  export async function addMusician(musicianObj, endpoint) {
     console.log(endpoint);
+    const json = JSON.stringify(musicianObj)
     const response = await fetch(`${endpoint}/Musikere/backend/db/`, {
         method: "POST",
-        body: JSON.stringify(musicianObj),
+        'Content-Type': 'application/json',
+        body: json
     });
     if (response.ok) {
         await updateGrid();
@@ -83,7 +85,7 @@ export function prepareData(obj) {
 /* ========== UPDATE ========== */
 // Sends put request to endpoint with musician object
  export async function updateMusician(musician, musicianID, endpoint) {
-    const response = await fetch(`${endpoint}/Musikere/backend/db/${musicianID}.json`, {
+    const response = await fetch(`${endpoint}/Musikere/backend/db/musicians/01${musicianID}.json`, {
     method: "PUT",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(musician),

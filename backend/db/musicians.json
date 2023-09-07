@@ -23,21 +23,218 @@
         "dateOfBirth": "15/01/1981",
         "musicLabel": "RCA, Polo Grounds, Mr. 305 Inc., Sony Latin, Radical by The Orchard, Poe Boy, Bad Boy Latino, Ultra, J, TVT, Luke",
         "height": 173,
-        "knownFor": "Conspiracy Theorist (COVID-19)"
+        "knownFor": "Konspirationsteoretiker (COVID-19)"
 
     },
      {
         "id": 3,
         "image": "https://www.cmuse.org/wp-content/uploads/2016/04/prince-300x167.jpg",
         "stageName": "Prince",
-        "fullName": "Prince",
+        "fullName": "Prince Rogers Nelson",
         "dateOfBirth": "06/07/1958",
         "genre": "Pop",
         "musicLabel": "Sony",
         "activeSince": "1999",
-        "album": "Prince",
+        "album": "Prince, For You, 1999, Controversy",
         "height": 168,
-        "knownFor": "Movie directing, Composing scores, Design"
+        "knownFor": "Filminstruktør, Komponist, Designer"
+    },
+{
+        "id": 6,
+        "stageName": "KIDD",
+        "fullName": "Nikolaj Manuel Vonsild",
+        "genre": "Rap, Hip-hop",
+        "image": "https://i.discogs.com/7iGlWu0nXC9J7a3O1l3WSwOxD3UE9deN93vlCY9bEbs/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE4MzU2/MDYtMTMzNTE2NDky/Ni5qcGVn.jpeg",
+        "album": "KIDD, KYS, Dråber I Havet",
+        "musicLabel": "CHEFF RECORDS, Independent",
+        "activeSince": 2010,
+        "dateOfBirth": "12/03/1988",
+        "height": 182,
+        "knownFor": "Lyriker, Gadestilen"
+    },
+    {
+        "id": 7,
+        "stageName": "Medina",
+        "fullName": "Medina Danielle Oona Valbak",
+        "genre": "Pop, Electropop",
+        "image": "https://apps-cloud.n-tv.de/img/17082586-1483445528000/16-9/750/Medina-c-Marco-Van-Rijt-MG-3635.jpg",
+        "album": "Velkommen til Medina, For altid, We Survive",
+        "musicLabel": "Labelmade, A:larm, RCA",
+        "activeSince": 2008,
+        "dateOfBirth": "30/11/1982",
+        "height": 162,
+        "knownFor": "Hit Singles, Songwriting"
+    },
+    {
+        "id": 8,
+        "stageName": "Danser med Drenge",
+        "fullName": "Lars K. Andersen, Jørgen Klubin",
+        "genre": "Pop, Rock",
+        "image": "https://www.dansermeddrenge.dk/presse/DmD6presbil1.jpg",
+        "album": "Hvor længe vil du ydmyge dig?, Er der nogen i himlen?, Kom og giv mig alle dine drømme",
+        "musicLabel": "Genlyd, Pladecompagniet, ArtPeople",
+        "activeSince": 1991,
+        "dateOfBirth": "",
+        "height": null,
+        "knownFor": "ikke andet"
+    },
+    {
+        "id": 9,
+        "stageName": "Søs Fenger",
+        "fullName": "Søs Møller Fenger",
+        "genre": "Pop, Rock",
+        "image": "https://www.fuglsoebillet.dk/wp-content/uploads/S%C3%B8sFenger.jpg",
+        "album": "Søs, On Holiday, Kun et kys herfra",
+        "musicLabel": "Sony Music",
+        "activeSince": 1989,
+        "dateOfBirth": "02/12/1961",
+        "height": 170,
+        "knownFor": "Singer-Songwriter, Skuespillerinde"
+    },
+    {
+        "id": 10,
+        "stageName": "Nik & Jay",
+        "fullName": "Nikolaj Thygesen & Jannik Brandt Thomsen",
+        "genre": "Pop, Hip-hop",
+        "image": "https://images.genius.com/c6775b2944139abcadf77287a1eafa58.1000x964x1.jpg",
+        "album": "2, 3: Fresh, Engle eller dæmoner, Det vi gør, Det vi kan li'",
+        "musicLabel": "Copenhagen Records",
+        "activeSince": 2002,
+        "dateOfBirth": "",
+        "height": null,
+        "knownFor": "Danish Pop Duo"
+    },
+    {
+        "id": 11,
+        "stageName": "Cardi B",
+        "fullName": "Belcalis Marlenis Almánzar",
+        "genre": "Hip-hop, Rap",
+        "image": "https://i.insider.com/5c5d659ddde8673c5d33cf5a?width=1993",
+        "album": "Invasion of Privacy, Gangsta Bitch Music Vol. 1, Gangsta Bitch Music Vol. 2",
+        "musicLabel": "Atlantic, KSR Group",
+        "activeSince": 2015,
+        "dateOfBirth": "11/10/1992",
+        "height": 160,
+        "knownFor": "Chart-Topping Hits, Rapper, Actress"
+    },
+    {
+        "id": 12,
+        "stageName": "Megan Thee Stallion",
+        "fullName": "Megan Jovon Ruth Pete",
+        "genre": "Hip-hop, Rap",
+        "image": "https://www.nme.com/wp-content/uploads/2022/02/Megan-Thee-Stallion-ACL-2021.jpg",
+        "album": "Good News, Fever, Tina Snow",
+        "musicLabel": "300, 1501 Certified",
+        "activeSince": 2016,
+        "dateOfBirth": "15/02/1995",
+        "height": 178,
+        "knownFor": "Empowering Lyrics, Female Rapper"
+    },
+    {
+        "id": 13,
+        "stageName": "YG",
+        "fullName": "Keenon Daequan Ray Jackson",
+        "genre": "Hip-hop, Rap",
+        "image": "https://raptv.com/wp-content/uploads/gettyimages-1173510040-scaled.jpg",
+        "album": "My Krazy Life, Still Brazy, Stay Dangerous",
+        "musicLabel": "Def Jam, 4Hunnid, CTE World",
+        "activeSince": 2009,
+        "dateOfBirth": "09/03/1990",
+        "height": 188,
+        "knownFor": "West Coast Rapper, Social Activism"
+    },
+       {
+        "id": 14,
+        "stageName": "Rita Ora",
+        "fullName": "Rita Sahatçiu Ora",
+        "genre": "Pop, R&B",
+        "image": "https://2.bp.blogspot.com/-RBi-TFOYvXY/V4t5qCOmnRI/AAAAAAAAB-4/ZA9fSBrVeTYfk30U25VA8V5L4s0s5o0AgCLcB/s1600/rita.jpg",
+        "album": "Ora, Phoenix, R.O.S.E.",
+        "musicLabel": "Atlantic, Roc Nation",
+        "activeSince": 2007,
+        "dateOfBirth": "26/11/1990",
+        "height": 166,
+        "knownFor": "International Pop Star, Actress"
+    },
+    {
+        "id": 15,
+        "stageName": "Dafina Zeqiri",
+        "fullName": "Dafina Zeqiri",
+        "genre": "Pop, R&B",
+        "image": "https://indeksonline.net/wp-content/uploads/2018/01/dafinaa.jpg",
+        "album": "Single Releases",
+        "musicLabel": "Bzzz Entertainment",
+        "activeSince": 2006,
+        "dateOfBirth": "13/04/1989",
+        "height": 168,
+        "knownFor": "R&B Singer, Songwriter"
+    },
+    {
+        "id": 16,
+        "stageName": "Elvana Gjata",
+        "fullName": "Elvana Gjata",
+        "genre": "Pop, Dance",
+        "image": "https://cms.intv.al/media/k2/items/cache/c43e4bf47d8ce8d2a7baa5438dbd6b4e_L.jpg",
+        "album": "Afër dhe larg, Lejla, Xheloz",
+        "musicLabel": "Threedots Productions",
+        "activeSince": 2001,
+        "dateOfBirth": "03/02/1987",
+        "height": 172,
+        "knownFor": "Albanian Pop Icon"
+    },
+    {
+        "id": 17,
+        "stageName": "Ermal Meta",
+        "fullName": "Ermal Meta",
+        "genre": "Pop, Rock",
+        "image": "https://gdsit.cdn-immedia.net/2019/01/ERMAL-META.jpg",
+        "album": "Vietato morire, Non abbiamo armi, Umano",
+        "musicLabel": "Mescal, Universal Music Italia",
+        "activeSince": 2006,
+        "dateOfBirth": "20/04/1981",
+        "height": 175,
+        "knownFor": "Italian-Albanian Singer-Songwriter"
+    }, {
+    "id": 18,
+    "stageName": "Dua Lipa",
+    "fullName": "Dua Lipa",
+    "genre": "Pop, Electropop",
+    "image": "https://www.hawtcelebs.com/wp-content/uploads/2017/06/dua-lipa-at-album-photocall-in-london-06-07-2017_11.jpg",
+    "album": "Dua Lipa, Future Nostalgia, Club Future Nostalgia",
+    "musicLabel": "Warner Records",
+    "activeSince": 2015,
+    "dateOfBirth": "22/08/1995",
+    "height": 173,
+    "knownFor": "Chart-Topping Hits, Grammy Winner, Model"
+    },
+    {
+        "id": 19,
+        "stageName": "Elton John",
+        "fullName": "Sir Elton Hercules John",
+        "genre": "Pop, Rock",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/8/80/Elton_John_2011_Shankbone_2_(cropped).JPG",
+        "album": "Goodbye Yellow Brick Road, Rocket Man, Candle in the Wind",
+        "musicLabel": "Rocket, MCA, Island, Universal",
+        "activeSince": 1962,
+        "dateOfBirth": "25/03/1947",
+        "height": 178,
+        "knownFor": "Iconic Pianist, Songwriter, LGBTQ+ Advocate"
+    },
+    {
+        "id": 20,
+        "stageName": "Ariel Camacho",
+        "fullName": "José Ariel Camacho Barraza",
+        "genre": "Regional Mexican, Banda",
+        "image": "https://www.debate.com.mx/export/sites/debate/img/ahora/2016/02/09/11856653_1007190625988688_560492687_n.jpg_1647311013.jpg",
+        "album": "Para Siempre, El Karma, Hablemos",
+        "musicLabel": "DEL Records",
+        "activeSince": 2010,
+        "dateOfBirth": "08/07/1992",
+        "height": 178,
+        "knownFor": "Banda Singer-Songwriter"
     }
-
 ]
+
+
+
+

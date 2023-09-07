@@ -71,9 +71,9 @@
             </fieldset>
           </div>
           <div id="create-buttons">
-            <button id="create-submit-btn">Submit</button>
-            <button type="reset">Clear form</button>
-            <button type="button" id="create-cancel-btn">Cancel</button>
+            <button class="btn" id="create-submit-btn">Submit</button>
+            <button class="btn" type="reset">Clear form</button>
+            <button class="btn" type="button" id="create-cancel-btn">Cancel</button>
           </div>
         </form>
       </dialog>
@@ -111,9 +111,9 @@
               <input type="text" name="knownFor" id="update-knownFor" placeholder="Also known for"/>
             </fieldset>
           <div id="update-buttons">
-            <button id="update-submit-btn">Post</button>
-            <button type="reset">Ryd al info</button>
-            <button type="button" id="update-cancel-btn">Fortryd</button>
+            <button class="btn" id="update-submit-btn">Post</button>
+            <button class="btn" type="reset">Ryd al info</button>
+            <button class="btn" type="button" id="update-cancel-btn">Fortryd</button>
           </div>
         </form>
       </dialog>
@@ -123,9 +123,9 @@
         <h3>Are you sure you want to delete this musician?</h3>
         <form id="deleteForm" action="">
           <div>
-            <span id="delete-musicianID"></span>
-            <button id="delete-submit-btn">Delete</button>
-            <button id="delete-cancel-btn" type="button">Cancel</button>
+            <span class="btn" id="delete-musicianID"></span>
+            <button class="btn" id="delete-submit-btn">Delete</button>
+            <button class="btn" id="delete-cancel-btn" type="button">Cancel</button>
           </div>
         </form>
       </dialog>
@@ -138,7 +138,7 @@
               <!--insert img tag here with js-->
             </div>
             <form method="dialog" id="detail-close-button">
-              <button id="detail-cancel-btn">Close</button>
+              <button class="btn" id="detail-cancel-btn">Close</button>
             </form>
           </div>
           <div>
@@ -160,7 +160,6 @@
       <div id="toast-container"></div>
 
       <!-- ========== TOOLTIP FOR SHOWDIALOG ========== -->
-      <div id="detail-tooltip" class="tooltip">Show more details</div>
     </main>
     <footer>
       <p>By Ziggy</p>
