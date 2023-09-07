@@ -11,7 +11,7 @@ export let musicianArr;
 /* ========== UPDATE GRID VIEW ========== */
 export async function updateGrid() {
     musicianArr = await getMusicians(endpoint); // get posts from rest endpoint and save in global variable
-    showMusicians(musicianArr); // show all posts (append to the DOM) with posts as argument
+    showMusicians(musicianArr); // show all posts with posts as argument
 }
 
 /* ========== SHOW ALL Musicians ========== */
@@ -29,8 +29,7 @@ export function showMusician(musicianObj) {
     const myHTML = /*html*/ `
         <article id="grid-item">
             <div>
-                <div class="image-div" style="background-image: url(${musicianObj.image}"></div>
-                    <h2>${musicianObj.name}</h2>
+                    <h2>${musicianObj.stageName}</h2>
                     <img src=${musicianObj.image} id="musicianImage">
                     <p>Fulde navn - ${musicianObj.fullName}</p>
                     <p>Genrer - ${musicianObj.genre}</p>
@@ -39,7 +38,7 @@ export function showMusician(musicianObj) {
                     <p>Født ${musicianObj.dateOfBirth}</p>
                 </div>
             <div class="grid-item-btns">
-                <span class="hidden musicianID">${musicianObj.id}</span>
+                <span hidden class="hidden musicianID">${musicianObj.id}</span>
                 <button class="like-btn">Like(<span class="likes">${musicianObj.likes}</span>)</button>
                 <button class="dislike-btn">Dislike</button>
                 <button class="delete-btn">Delete</button>
@@ -100,7 +99,7 @@ function addToolTip(musicianArticleElement) {
     window.addEventListener("scroll", updateTooltipPos);
 }
 
-/* ========== FILTER BY MALE/FEMALE ========== */
+/* ========== FILTER BY FAV ========== */
 export async function filterByFav(event){
     const filterSelect = event.target;
     await updateGrid();

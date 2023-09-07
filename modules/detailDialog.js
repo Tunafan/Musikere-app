@@ -4,23 +4,13 @@ import {addLike, removeLike} from "./like.js";
 /* ========== DETAIL DIALOG ========== */
 export async function showDetailDialog(musician) {
     const musicianID = musician["id"];
+    console.log(musicianID);
     const musicianObj = await getOneMusician(musicianID, endpoint);
     const detailDialog = document.querySelector("#detail-dialog");
 
-    /* Musician ID */
     detailDialog.querySelector("#detail-musicianID").textContent = musicianID;
-    /* Image */
     detailDialog.querySelector("#detail-image").innerHTML = /*html*/ `<img src="${musicianObj["image"]}" alt="">`;
-    /* Health And Diet info */
-    generateHealthAndDietInfo(musicianObj, detailDialog);
-    /* Name and Likes */
-    generateNameAndLikesInfo(detailDialog, musicianObj);
-    /* General Information */
     generateGeneralInfo(musicianObj, detailDialog);
-    /* Experience and Registration */
-    generateExperienceAndRegistrationInfo(detailDialog, musicianObj);
-    /* Owner information */
-    generateOwnerInfo(musicianObj, detailDialog);
 
     /* Event listeners */
     addDetailDialogEventListeners(detailDialog, musicianObj);

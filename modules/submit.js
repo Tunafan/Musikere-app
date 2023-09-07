@@ -8,28 +8,17 @@ export async function submitCreateForm(event) {
     const form = event.target;
     const musician = {
         image: form.image.value,
-        name: form.horseName.value,
-        race: form.horseRace.value,
-        likes: 0,
+        stageName: form.stageName.value,
+        name: form.name.value,
+        DOB: form.DOB.value,
+        genre: form.genre.value,
+        musicLabel: form.musicLabel.value,
+        activeSince: form.activeSince.value,
+        album: form.album.value,        
         height: form.height.value,
-        gender: form.gender.value,
-        hasTapeworm: form.hasTapeworm.checked,
-        age: form.age.value,
-        color: form.horseColor.value,
-        temperament: form.temperament.value,
-        riderExperienceRequired: form.riderExperienceRequired.checked,
-        registered: form.registered.checked,
-        vaccinations: form.vaccinations.value.replaceAll(" ", "").split(","),
-        diet: form.diet.value.replaceAll(" ","").split(","),
-        trainingLevel: form.trainingLevel.value,
-        owner: {
-            name: form.ownerName.value,
-            email: form.ownerEmail.value,
-            phone: form.ownerPhone.value,
-        },
-        topspeed: Number(form.topspeed.value),
+        knownFor: form.knownFor.value,
     };
-    await addHorse(musician, endpoint);
+    await addMusician(musician, endpoint);
     form.parentElement.close();
     form.reset();
 }
@@ -38,29 +27,18 @@ export async function submitCreateForm(event) {
 export async function submitUpdateForm(event) {
     event.preventDefault();
     const form = event.target;
-    const horseID = form.musicianID.value;
-    const horse = {
+    const musicianID = form.musicianID.value;
+    const musician = {
         image: form.image.value,
-        name: form.musicianName.value,
-        race: form.horseRace.value,
-        likes: form.likes.value,
+        stageName: form.stageName.value,
+        name: form.name.value,
+        DOB: form.DOB.value,
+        genre: form.genre.value,
+        musicLabel: form.musicLabel.value,
+        activeSince: form.activeSince.value,
+        album: form.album.value,        
         height: form.height.value,
-        gender: form.gender.value,
-        hasTapeworm: form.hasTapeworm.checked,
-        age: form.age.value,
-        color: form.horseColor.value,
-        temperament: form.temperament.value,
-        riderExperienceRequired: form.riderExperienceRequired.checked,
-        registered: form.registered.checked,
-        vaccinations: form.vaccinations.value.replaceAll(" ", "").split(","),
-        diet: form.diet.value.replaceAll(" ","").split(","),
-        trainingLevel: form.trainingLevel.value,
-        owner: {
-            name: form.ownerName.value,
-            email: form.ownerEmail.value,
-            phone: form.ownerPhone.value,
-        },
-        topspeed: Number(form.topspeed.value),
+        knownFor: form.knownFor.value,
     };
     await updateMusician(musician, musicianID, endpoint);
     form.parentElement.close();
@@ -71,12 +49,12 @@ export async function submitUpdateForm(event) {
 export async function deleteMusicianClicked(event) {
     event.preventDefault();
     const deleteForm = document.querySelector("#deleteForm");
-    const horseID = deleteForm.querySelector("#delete-musicianID").textContent;
+    const musicianID = deleteForm.querySelector("#delete-musicianID").textContent;
 
     if (validatePassword(deleteForm["password"].value)) {
-        await submitDeleteForm(horseID);
+        await submitDeleteForm(musicianID);
     } else {
-        showToastMessage("Wrong password", "error");
+        showToastMessage("NO", "error");
     }
 }
 async function submitDeleteForm(musicianID) {
@@ -84,5 +62,5 @@ async function submitDeleteForm(musicianID) {
     deleteForm.removeEventListener("submit", deleteMusicianClicked);
     deleteForm.parentElement.close();
     deleteForm.password.value = "";
-    await deleteHorse(musicianID, endpoint);
+    await deleteMusician(musicianID, endpoint);
 }

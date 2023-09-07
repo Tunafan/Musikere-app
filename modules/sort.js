@@ -8,8 +8,8 @@ export async function sortMusicians(event) {
             return b.likes-a.likes;
         } else if (select.value === "name") {
             return a.name.localeCompare(b.name);
-        } else if (select.value === "race") {
-            return a.race.localeCompare(b.race);
+        } else if (select.value === "DOB") {
+            return a.DOB.localeCompare(b.DOB);
         }
     }
     musicianArr.sort(sortBy)

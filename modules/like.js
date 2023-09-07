@@ -25,7 +25,7 @@ export async function removeLike(event, likeButton, dislikeButton, musicianObj) 
 //sends patch request with the updated amount of likes
 async function updateLikes(likesAmount, musicianID, endpoint, button, likeType) {
     // location is "detailDialog" or "musicianGrid"
-    const response = await fetch(`${endpoint}musicians/${musicianID}.json`, {
+    const response = await fetch(`${endpoint}/musicians${musicianID}.json`, {
         method: "PATCH",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({

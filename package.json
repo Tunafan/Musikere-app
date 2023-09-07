@@ -2,7 +2,7 @@
   "name": "lars",
   "version": "1.0.0",
   "description": "folder of the back end",
-  "main": "app.js",
+  "main": "server.js",
   "type": "module",
   "scripts": {},
   "author": "Lars",

@@ -33,9 +33,9 @@
     <button id="add-musician-dialog-button">Tilføj musiker</button>
 </header>
 <main>
-<section id="musicianGrid" class="grid-container"> Hey
+<div id="musicianGrid" class="grid-container"> Hey
     <!-- indsæt musikere her med javascript -->
-</section>
+</div>
 
 </main>
 <!-- ========== CREATE FORM ========== -->
@@ -51,19 +51,23 @@
             <fieldset>
               <legend>Generel info</legend>
               <label for="create-stageName">Kunstnernavn/Alter ego:</label>
-              <input type="text" name="name" id="create-stageName" placeholder="Stage name" />
+              <input type="text" name="stageName" id="create-stageName" placeholder="Stage name" />
+              <label for="create-name">Ægte navn</label>
+              <input type="text" name="name" id="create-name" placeholder="Real name" />
               <label for="create-DOB">Fødselsdato</label>
-              <input type="text" step="any" name="age" id="create-DOB" placeholder="DD/MM/YYYY" required/>
+              <input type="text" step="any" name="DOB" id="create-DOB" placeholder="DD/MM/YYYY" required/>
               <label for="create-genres">Genrer:</label>
               <input type="text" name="genre" id="create-genre" placeholder="Musical genres" required/>
               <label for="create-musicLabel">Pladeselskaber:</label>
               <input type="text" name="musicLabel" id="create-musicLabel" placeholder="Record labels" required/>
+              <label for="create-activeSince">Aktiv siden:</label>
+              <input type="number" name="activeSince" id="create-activeSince" placeholder="Active since" required/>
               <label for="create-album">Albums:</label>
-              <input type="text" name="Album" id="create-album" placeholder="Albums"/>
+              <input type="text" name="album" id="create-album" placeholder="Albums"/>
               <label for="create-height">Højde:</label>
               <input type="number" step="any" min="0" max="300" name="height" id="create-height" placeholder="Height in centimeters"/>
-              <label for="create-height">Kendt for:</label>
-              <input type="text" name="known-for" id="create-knownFor" placeholder="Andre områder, musikeren har udfoldet sig"/>
+              <label for="create-knownFor">Kendt for:</label>
+              <input type="text" name="knownFor" id="create-knownFor" placeholder="Andre områder, musikeren har udfoldet sig"/>
             </fieldset>
           </div>
           <div id="create-buttons">
@@ -76,10 +80,10 @@
 
       <!-- ========== UPDATE FORM ========== -->
       <dialog id="update-dialog">
-        <h2>Update Horse</h2>
+        <h2>Update musician</h2>
         <form action="" id="update-form">
-          <label for="update-horseID"></label>
-          <input type="hidden" name="horseID" id="update-horseID" />
+          <label for="update-musicianID"></label>
+          <input type="hidden" name="musicianID" id="update-musicianID" />
           <label for="update-likes"></label>
           <input type="hidden" name="likes" id="update-likes" />
           <fieldset>
@@ -87,54 +91,16 @@
             <label for="update-image">Image URL:*</label>
             <input type="url" name="image" id="update-image" placeholder="Image URL" required/>
           </fieldset>
-          <div class="side-by-side">
-            <div>
-              <fieldset>
-                <legend>Owner Information</legend>
-                <label for="update-ownerName">Name:*</label>
-                <input type="text" name="ownerName" id="update-ownerName" placeholder="Owner Name" minlength="2" maxlength="40" required/>
-                <label for="update-ownerEmail">Email:*</label>
-                <input type="email" name="ownerEmail" id="update-ownerEmail" placeholder="Email" required/>
-                <label for="update-ownerPhone">Phone number:</label>
-                <input type="text" name="ownerPhone" id="update-ownerPhone" placeholder="Phone Number"/>
-              </fieldset>
-              <fieldset>
-                <legend>Good to know</legend>
-                <label for="update-temperament">Temperament:</label>
-                <select name="temperament" id="update-temperament">
-                  <option value="spirited">Spirited</option>
-                  <option value="calm">Calm</option>
-                  <option value="friendly">Friendly</option>
-                  <option value="wild">Wild</option>
-                  <option value="energetic">Energetic</option>
-                  <option value="gentle">Gentle</option>
-                  <option value="eager">Eager</option>
-                  <option value="playful">Playful</option>
-                </select>
-                <label for="update-trainingLevel">Training level:</label>
-                <select name="trainingLevel" id="update-trainingLevel">
-                  <option value="advanced">Advanced</option>
-                  <option value="intermediate">Intermediate</option>
-                  <option value="beginner">Beginner</option>
-                  <option value="untrained">Untrained</option>
-                  <option value="basic">Basic</option>
-                </select>
-                <label for="update-riderExperienceRequired">Rider experience</label>
-                <input type="checkbox" name="riderExperienceRequired" id="update-riderExperienceRequired"/>
-                <label for="update-registered">Registered</label>
-                <input type="checkbox" name="registered" id="update-registered"/>
-              </fieldset>
-            </div>
             <fieldset>
               <legend>General Information</legend>
-              <label for="update-horseName">Name:*</label>
-              <input type="text" name="horseName" id="update-horseName" placeholder="Name of horse" required/>
+              <label for="update-musicianName">Name:*</label>
+              <input type="text" name="musicianName" id="update-musicianName" placeholder="Name of musician" required/>
               <label for="update-age">Age:*</label>
-              <input type="number" step="any" min="0" max="500" name="age" id="update-age" placeholder="Age of horse" required/>
-              <label for="update-horseRace">Race:*</label>
-              <input type="text" name="horseRace" id="update-horseRace" placeholder="Race of horse" required/>
-              <label for="update-horseColor">Color:</label>
-              <input type="text" name="horseColor" id="update-horseColor" minlength="3" maxlength="20"/>
+              <input type="number" step="any" min="0" max="500" name="age" id="update-age" placeholder="Age of musician" required/>
+              <label for="update-musicianRace">Race:*</label>
+              <input type="text" name="musicianRace" id="update-musicianRace" placeholder="Race of musician" required/>
+              <label for="update-musicianColor">Color:</label>
+              <input type="text" name="musicianColor" id="update-musicianColor" minlength="3" maxlength="20"/>
               <label>Gender:*</label>
               <div>
                 <label for="update-gender-male">Male</label>
@@ -170,12 +136,12 @@
 
       <!-- ========== DELETE FORM ========== -->
       <dialog id="dialogDeleteForm">
-        <h3>Are you sure you want to delete this horse?</h3>
+        <h3>Are you sure you want to delete this musician?</h3>
         <form id="deleteForm" action="">
           <label for="delete-password-input">Enter admin password:</label>
           <input type="password" name="password" placeholder="Type password to confirm" id="delete-password-input"/>
           <div>
-            <span id="delete-horseID" class="hidden"></span>
+            <span id="delete-musicianID" class="hidden"></span>
             <button id="delete-submit-btn">Delete</button>
             <button id="delete-cancel-btn" type="button">Cancel</button>
           </div>
@@ -186,11 +152,11 @@
       <dialog id="detail-dialog">
         <article id="detail-grid">
           <div id="detail-image-div">
-            <div class="horse-info" id="detail-image">
+            <div class="musician-info" id="detail-image">
               <!--insert img tag here with js-->
             </div>
             <div id="detail-like-btns">
-              <span id="detail-horseID" class="hidden horseID"></span>
+              <span id="detail-musicianID" class="hidden musicianID"></span>
               <button id="detail-like-btn" class="like-btn detailDialog">
                 Like
               </button>
@@ -198,24 +164,18 @@
                 Dislike
               </button>
             </div>
-            <div id="detail-owner-div">
-              <h3>Owner info</h3>
-              <ul id="detail-owner">
-                <!--insert owner key values here with js-->
-              </ul>
-            </div>
             <form method="dialog" id="detail-close-button">
               <button id="detail-cancel-btn">Close</button>
             </form>
           </div>
           <div>
             <div id="detail-name-div">
-              <h2 class="horse-info">
-                <span id="detail-name"><!--insert horse name here with js--></span>
+              <h2 class="musician-info">
+                <span id="detail-name"><!--insert name here with js--></span>
               </h2>
             </div>
             <div id="detail-likes-div">
-              <h5 class="horse-info">
+              <h5 class="musician-info">
                 <span id="detail-likes"><!--insert likes here with js--></span>
               </h5>
             </div>
@@ -223,40 +183,6 @@
               <p id="detail-generalInformation">
                 <!--insert general information here with js-->
               </p>
-            </div>
-            <div id="detail-experienceAndRegistration-div">
-              <h3>Experience and registration</h3>
-              <ul>
-                <li id="detail-trainingLevel">
-                  <!--insert training level here with js-->
-                </li>
-                <li id="detail-riderExperienceRequired">
-                  <!--insert rider experience required here with js-->
-                </li>
-                <li id="detail-registered">
-                  <!--insert registration status here with js-->
-                </li>
-              </ul>
-            </div>
-            <div id="detail-healthAndDiet-div">
-              <h3>Health and Diet</h3>
-              <ul>
-                <li>
-                  <h4>Likes to eat:</h4>
-                  <ul id="detail-diet">
-                    <!--insert diet li elements here with js-->
-                  </ul>
-                </li>
-                <li>
-                  <h4>Vaccinations:</h4>
-                  <ul id="detail-vaccinations">
-                    <!--insert vaccination li elements here with js-->
-                  </ul>
-                </li>
-                <li>
-                  <h4 id="detail-hasTapeworm"></h4>
-                </li>
-              </ul>
             </div>
           </div>
         </article>

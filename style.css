@@ -4,12 +4,17 @@ body {
    padding: 1vw;
 }
 
-#musicians-grid{
+.grid-container{
   display: grid;
-   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; 
+   grid-template-columns: 1fr 1fr 1fr 1fr; 
+}
+
+.grid-item{
+padding: 100px;
 }
 
 #musicianImage{
    max-width: 16vw;
 
 }
+

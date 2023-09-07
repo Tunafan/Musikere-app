@@ -9,7 +9,7 @@ window.addEventListener("load", main)
 
 
 // ----------- * globale variabler * -----------
-export const endpoint = `./db/`
+export const endpoint = `http://localhost:1312`
 
 
 async function main(){
@@ -37,28 +37,25 @@ await updateGrid();
 }
 // ========== CREATE ========== */
  export async function addMusician(musicianObj, endpoint) {
-    const response = await fetch(`${endpoint}/musicians.json`, {
+    console.log(endpoint);
+    const response = await fetch(`${endpoint}/Musikere/db/`, {
         method: "POST",
         body: JSON.stringify(musicianObj),
     });
     if (response.ok) {
         await updateGrid();
-        showToastMessage("Musician added, nice", "success");
-    } else {
-        showToastMessage(`hov den er gal. ${response.status} ${response.statusText}.`, "error");
-        console.error(`Bad response at addmusician: ${response.status} ${response.statusText}.`);
+    //     showToastMessage("Musiker tlføjet. Tak!", "success");
+    // } else {
+    //     showToastMessage(`hov den er gal. ${response.status} ${response.statusText}.`, "error");
+    //     console.error(`Bad response at addMusician: ${response.status} ${response.statusText}.`);
     }
 }
 /* ========== READ ALL========== */
  export async function getMusicians(endpoint) {
-    const response = await fetch(`${endpoint}/musicians.json`);
+    const response = await fetch(`${endpoint}/musikere/db/`);
     if(response.ok){
         const data = await response.json();
         return prepareData(data);
-    }
-    else{
-        showToastMessage(`Oops something went wrong. ${response.status} ${response.statusText}.`, "error");
-        console.error(`Bad response at getMusicians: ${response.status} ${response.statusText}.`);
     }
 }
 /* ========== Data preparation for getMusicians ========== */
@@ -66,23 +63,23 @@ export function prepareData(obj) {
     const dataArr = [];
     for (const key in obj) {
         const musician = obj[key];
-        musician["id"] = key;
+      
         dataArr.push(musician);
     }
     return dataArr;
 }
 /* ========== READ ONE ========== */
  export async function getOneMusician(musicianID, endpoint) {
-    const response = await fetch(`${endpoint}musicians/${musicianID}.json`);
+    const response = await fetch(`${endpoint}/musikere/db/${musicianID}.json`);
     if (response.ok) {
         const musician = await response.json();
-        musician["id"] = musicianID;
+        
         return musician;
     }
-    else{
-        showToastMessage(`Oops something went wrong. ${response.status} ${response.statusText}.`, "error");
-        console.error(`Bad response at getOnemusician: ${response.status} ${response.statusText}.`);
-    }
+    // else{
+    //     showToastMessage(`Oops something went wrong. ${response.status} ${response.statusText}.`, "error");
+    //     console.error(`Bad response at getOnemusician: ${response.status} ${response.statusText}.`);
+    // }
 }
 /* ========== UPDATE ========== */
 // Sends put request to endpoint with musician object

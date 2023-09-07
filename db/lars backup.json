@@ -1,17 +1,16 @@
 [
      {
-        "id": 1,
+        "id": "01",
         "stageName": "Rosalía",
         "fullName": "Rosalia Vila Tobella",
         "genre": "Pop, Reggaeton, Flamenco",
         "image": "https://www.rosalia.com/wp-content/uploads/2021/02/FMM.jpg",
         "albums": "Los Ángeles, El Mal Querer, Motomami",
         "activeSince": 2016,
-        "dateOfBirth": "25. September 1992",
-        "height": 177
+        "dateOfBirth": "25. September 1992"
     },
      {
-        "id": 2,
+        "id": "02",
         "stageName": "Mr. Worldwide",
         "fullName": "Armando Christian Pérez",
         "genre": "Pop, Reggaeton, Hip-hop",
@@ -19,11 +18,10 @@
         "albums": "Out of the Pit",
         "activeSince": 2000,
         "dateOfBirth": "15. January 1981",
-        "musicLabels": "RCA, Polo Grounds, Mr. 305 Inc., Sony Latin, Radical by The Orchard, Poe Boy, Bad Boy Latino, Ultra, J, TVT, Luke",
-        "height": 173
+        "musicLabels": "RCA, Polo Grounds, Mr. 305 Inc., Sony Latin, Radical by The Orchard, Poe Boy, Bad Boy Latino, Ultra, J, TVT, Luke"
     },
      {
-        "id": 3,
+        "id": "03",
         "image": "https://www.cmuse.org/wp-content/uploads/2016/04/prince-300x167.jpg",
         "stageName": "Prince",
         "fullName": "Prince",
@@ -32,7 +30,7 @@
         "musicLabel": "Sony",
         "activeSince": "1999",
         "album": "Prince",
-        "height": 168,
+        "height": "168",
         "knownFor": "Movie directing, Composing scores, Design"
     }
 
