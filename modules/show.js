@@ -3,7 +3,6 @@ import {showDeleteDialog} from "./deleteDialog.js";
 import {showUpdateDialog} from "./updateDialog.js";
 import {showDetailDialog} from "./detailDialog.js";
 import {getMusicians, endpoint} from "./app.js";
-import {addLike, removeLike} from "./like.js";
 
 /* ========== Musician Array ========== */
 export let musicianArr;
@@ -33,9 +32,11 @@ export function showMusician(musicianObj) {
                     <img src=${musicianObj.image} id="musicianImage">
                     <p>Fulde navn - ${musicianObj.fullName}</p>
                     <p>Genrer - ${musicianObj.genre}</p>
-                    <p id="releasedAlbums">Plader - ${musicianObj.albums}</p>
+                    <p id="releasedAlbums">Plader - ${musicianObj.album}</p>
                     <p>Har lavet musik siden ${musicianObj.activeSince}</p>
                     <p>Født ${musicianObj.dateOfBirth}</p>
+                    <p>Højde - ${musicianObj.height} cm</p>
+                    <p>Pladeselskab - ${musicianObj.musicLabel}</p>
                 </div>
             <div class="grid-item-btns">
                 <span hidden class="hidden musicianID">${musicianObj.id}</span>
@@ -50,22 +51,10 @@ export function showMusician(musicianObj) {
         const currentMusicianArticle = musicianGridContainer.querySelector("article:last-child");
 
     addShowMusicianEventListeners(currentMusicianArticle, musicianObj);
-
-    //tooltip for showDetailDialog
-        addToolTip(currentMusicianArticle);
 }
-
 function addShowMusicianEventListeners(currentMusicianArticle, musicianObj) {
     //detail dialog event listener
     currentMusicianArticle.addEventListener("click", () => showDetailDialog(musicianObj));
-
-    //like button event listener
-    const likeButton = currentMusicianArticle.querySelector(".like-btn");
-    likeButton.addEventListener("click", (event) => addLike(event, likeButton, dislikeButton, musicianObj));
-
-    //dislike button event listener
-    const dislikeButton = currentMusicianArticle.querySelector(".dislike-btn");
-    dislikeButton.addEventListener("click", (event) => removeLike(event, likeButton, dislikeButton, musicianObj));
 
     //update button event listener
     const updateButton = currentMusicianArticle.querySelector(".edit-btn");
@@ -80,23 +69,8 @@ function addShowMusicianEventListeners(currentMusicianArticle, musicianObj) {
 }
 
 /* ========== TOOLTIP FOR DETAIL DIALOG ========== */
-function addToolTip(musicianArticleElement) {
-    const tooltip = document.querySelector("#detail-tooltip");
-
-    function updateTooltipPos(event){
-        tooltip.style.top = event.clientY - 10 + "px";
-        tooltip.style.left = event.clientX + 10 + "px";
-    }
-
-    musicianArticleElement.addEventListener("mouseenter", () => {
-        tooltip.style.display = "block";
-        musicianArticleElement.addEventListener("mousemove", updateTooltipPos);
-    });
-    musicianArticleElement.addEventListener("mouseleave", () => {
-        tooltip.style.display = "none";
-        musicianArticleElement.removeEventListener("mousemove", updateTooltipPos);
-    });
-    window.addEventListener("scroll", updateTooltipPos);
+function addToolTip(musicianArticleElement){
+    console.log("hey");
 }
 
 /* ========== FILTER BY FAV ========== */

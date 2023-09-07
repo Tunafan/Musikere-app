@@ -19,7 +19,7 @@ export function closeDeleteDialog() {
     const deleteForm = document.querySelector("#deleteForm");
     deleteForm.parentElement.close();
     deleteForm.reset();
-    deleteForm.querySelector("#delete-horseID")
+    deleteForm.querySelector("#delete-musician")
         .textContent = "";
     deleteForm.querySelector("#delete-password-input")
         .value = "";

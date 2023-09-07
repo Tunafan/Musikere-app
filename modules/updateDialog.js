@@ -15,52 +15,25 @@ export function showUpdateDialog(musicianObj){
 }
 /* ========== UPDATE HELPER FUNCTIONS ========== */
 // Fills in all the fields in the update form
-function fillUpdateForm(horseObj){
+function fillUpdateForm(musicianObj){
     const form = document.querySelector("#update-form");
     /* id */
-    form.horseID.value = horseObj["id"];
-    /* likes */
-    form.likes.value = horseObj["likes"];
+    form.musicianID.value
     /* image */
-    form.image.value = horseObj["image"];
-
-    /* owner info */
-    form.ownerName.value = horseObj.owner["name"];
-    form.ownerEmail.value = horseObj.owner["email"];
-    form.ownerPhone.value = horseObj.owner["phone"];
-
-    /* good to know */
-    fillExperienceAndRegistrationInputs(form, horseObj);
+    form.image.value = musicianObj["image"];
     /* General information */
-    fillGeneralInformationInputs(form, horseObj);
-
-    /* Health and diet */
-    form.diet.value = horseObj["diet"].join(", ");
-    form.vaccinations.value = horseObj["vaccinations"].join(", ");
-    form.hasTapeworm.checked = horseObj["hasTapeworm"];
+    fillGeneralInformationInputs(form, musicianObj);
 }
-function fillExperienceAndRegistrationInputs(form, horseObj) {
-    const temperamentOptions = Array.from(form.temperament.options);
-    const selectedTemperamentOption = temperamentOptions.find( option => option.value === horseObj["temperament"] );
-    selectedTemperamentOption.selected = true;
+function fillGeneralInformationInputs(form, musicianObj) {
+    form.fullName.value = musicianObj["fullName"];
+    form.stageName.value = musicianObj["stageName"];
+    form.activeSince.value = musicianObj["activeSince"];
+    form.dateOfBirth.value = musicianObj["dateOfBirth"];
+    form.height.value = musicianObj["height"];
+    form.genre.value = musicianObj["genre"];
+    form.album.value = musicianObj["album"];
+    form.musicLabel.value = musicianObj["musicLabel"];
+    form.knownFor.value = musicianObj["knownFor"];
 
-    const trainingLevelOptions = Array.from(form.trainingLevel.options);
-    const selectedTrainingLevelOption = trainingLevelOptions.find( option => option.value === horseObj["trainingLevel"] );
-    selectedTrainingLevelOption.selected = true;
 
-    form.riderExperienceRequired.checked = horseObj["riderExperienceRequired"];
-    form.registered.checked = horseObj["registered"];
-}
-function fillGeneralInformationInputs(form, horseObj) {
-    form.horseName.value = horseObj["name"];
-    form.age.value = horseObj["age"];
-    form.horseRace.value = horseObj["race"];
-    form.horseColor.value = horseObj["color"];
-
-    const genderRadioInputs = Array.from(form.gender);
-    const selectedGenderRadioInput = genderRadioInputs.find( input => input.value === horseObj["gender"] );
-    selectedGenderRadioInput.checked = true;
-
-    form.height.value = horseObj["height"];
-    form.topspeed.value = horseObj["topspeed"];
 }

@@ -54,8 +54,8 @@
               <input type="text" name="stageName" id="create-stageName" placeholder="Stage name" />
               <label for="create-name">Ægte navn</label>
               <input type="text" name="name" id="create-name" placeholder="Real name" />
-              <label for="create-DOB">Fødselsdato</label>
-              <input type="text" step="any" name="DOB" id="create-DOB" placeholder="DD/MM/YYYY" required/>
+              <label for="create-dateOfBirth">Fødselsdato</label>
+              <input type="text" step="any" name="dateOfBirth" id="create-dateOfBirth" placeholder="DD/MM/YYYY" required/>
               <label for="create-genres">Genrer:</label>
               <input type="text" name="genre" id="create-genre" placeholder="Musical genres" required/>
               <label for="create-musicLabel">Pladeselskaber:</label>
@@ -84,8 +84,6 @@
         <form action="" id="update-form">
           <label for="update-musicianID"></label>
           <input type="hidden" name="musicianID" id="update-musicianID" />
-          <label for="update-likes"></label>
-          <input type="hidden" name="likes" id="update-likes" />
           <fieldset>
             <legend>Image</legend>
             <label for="update-image">Image URL:*</label>
@@ -93,43 +91,29 @@
           </fieldset>
             <fieldset>
               <legend>General Information</legend>
-              <label for="update-musicianName">Name:*</label>
-              <input type="text" name="musicianName" id="update-musicianName" placeholder="Name of musician" required/>
-              <label for="update-age">Age:*</label>
-              <input type="number" step="any" min="0" max="500" name="age" id="update-age" placeholder="Age of musician" required/>
-              <label for="update-musicianRace">Race:*</label>
-              <input type="text" name="musicianRace" id="update-musicianRace" placeholder="Race of musician" required/>
-              <label for="update-musicianColor">Color:</label>
-              <input type="text" name="musicianColor" id="update-musicianColor" minlength="3" maxlength="20"/>
-              <label>Gender:*</label>
-              <div>
-                <label for="update-gender-male">Male</label>
-                <input type="radio" name="gender" id="update-gender-male" value="male" checked/>
-                <label for="update-gender-female">Female</label>
-                <input type="radio" name="gender" id="update-gender-female" value="female"/>
-              </div>
-              <label for="update-height">Height:</label>
-              <input type="number" step="any" min="0" max="100" name="height" id="update-height" placeholder="Height in feet"/>
-              <label for="update-topspeed">Top speed:</label>
-              <input type="number" step="any" min="0" max="200" name="topspeed" id="update-topspeed" placeholder="Top speed in mph"/>
+              <label for="update-stageName">Kunstnernavn:</label>
+              <input type="text" name="stageName" id="update-stageName" placeholder="Stage name" required/>
+              <label for="update-fullName">Fulde navn:</label>
+              <input type="text" name="fullName" id="update-fullName" placeholder="Civilian name" required/>
+              <label for="update-dateOfBirth">Født i:</label>
+              <input type="text" name="dateOfBirth" id="update-dateOfBirth" placeholder="date of birth" required/>
+              <label for="update-genre">Genre:</label>
+              <input type="text" name="genre" id="update-genre" placeholder="Genre" required/>
+              <label for="update-album">Album:</label>
+              <input type="text" name="album" id="update-album" placeholder="Album" required/>
+              <label for="update-musicLabel">Pladeselskab:</label>
+              <input type="text" name="musicLabel" id="update-musicLabel" placeholder="Label" required/>
+              <label for="update-activeSince">Aktiv siden:</label>
+              <input type="number" name="activeSince" id="update-activeSince" minlength="4" maxlength="4"/>
+              <label for="update-height">Højde i cm:</label>
+              <input type="number" step="any" name="height" id="update-height" minlength="2" maxlength="3"/>
+              <label for="update-knownFor">Kendt for:</label>
+              <input type="text" name="knownFor" id="update-knownFor" placeholder="Also known for"/>
             </fieldset>
-          </div>
-          <fieldset>
-            <legend>Health and Diet</legend>
-            <label for="update-diet">Preferred Diet:</label>
-            <textarea name="diet" id="update-diet" minlength="2" maxlength="100" cols="10" rows="3" placeholder="Hay, Apples, Carrots,..."></textarea>
-            <label for="update-vaccinations">Vaccinations:</label>
-            <textarea name="vaccinations" id="update-vaccinations" minlength="2" maxlength="100" cols="10" rows="3" placeholder="Rabies, Tetanus, Influenza,..."></textarea>
-            <div></div>
-            <div>
-              <input type="checkbox" name="hasTapeworm" id="update-hasTapeworm"/>
-              <label for="update-hasTapeworm">Has tapeworm</label>
-            </div>
-          </fieldset>
           <div id="update-buttons">
-            <button id="update-submit-btn">Submit</button>
-            <button type="reset">Clear form</button>
-            <button type="button" id="update-cancel-btn">Cancel</button>
+            <button id="update-submit-btn">Post</button>
+            <button type="reset">Ryd al info</button>
+            <button type="button" id="update-cancel-btn">Fortryd</button>
           </div>
         </form>
       </dialog>
@@ -138,10 +122,8 @@
       <dialog id="dialogDeleteForm">
         <h3>Are you sure you want to delete this musician?</h3>
         <form id="deleteForm" action="">
-          <label for="delete-password-input">Enter admin password:</label>
-          <input type="password" name="password" placeholder="Type password to confirm" id="delete-password-input"/>
           <div>
-            <span id="delete-musicianID" class="hidden"></span>
+            <span id="delete-musicianID"></span>
             <button id="delete-submit-btn">Delete</button>
             <button id="delete-cancel-btn" type="button">Cancel</button>
           </div>
@@ -155,15 +137,6 @@
             <div class="musician-info" id="detail-image">
               <!--insert img tag here with js-->
             </div>
-            <div id="detail-like-btns">
-              <span id="detail-musicianID" class="hidden musicianID"></span>
-              <button id="detail-like-btn" class="like-btn detailDialog">
-                Like
-              </button>
-              <button id="detail-dislike-btn" class="dislike-btn detailDialog">
-                Dislike
-              </button>
-            </div>
             <form method="dialog" id="detail-close-button">
               <button id="detail-cancel-btn">Close</button>
             </form>
@@ -173,11 +146,6 @@
               <h2 class="musician-info">
                 <span id="detail-name"><!--insert name here with js--></span>
               </h2>
-            </div>
-            <div id="detail-likes-div">
-              <h5 class="musician-info">
-                <span id="detail-likes"><!--insert likes here with js--></span>
-              </h5>
             </div>
             <div id="detail-generalInformation-div">
               <p id="detail-generalInformation">

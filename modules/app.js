@@ -7,7 +7,6 @@ import { filterByFav, updateGrid } from "./show.js";
 
 window.addEventListener("load", main)
 
-
 // ----------- * globale variabler * -----------
 export const endpoint = `http://localhost:1312`
 
@@ -38,7 +37,7 @@ await updateGrid();
 // ========== CREATE ========== */
  export async function addMusician(musicianObj, endpoint) {
     console.log(endpoint);
-    const response = await fetch(`${endpoint}/Musikere/db/`, {
+    const response = await fetch(`${endpoint}/Musikere/backend/db/`, {
         method: "POST",
         body: JSON.stringify(musicianObj),
     });
@@ -52,7 +51,7 @@ await updateGrid();
 }
 /* ========== READ ALL========== */
  export async function getMusicians(endpoint) {
-    const response = await fetch(`${endpoint}/musikere/db/`);
+    const response = await fetch(`${endpoint}/musikere/backend/db/`);
     if(response.ok){
         const data = await response.json();
         return prepareData(data);
@@ -70,7 +69,7 @@ export function prepareData(obj) {
 }
 /* ========== READ ONE ========== */
  export async function getOneMusician(musicianID, endpoint) {
-    const response = await fetch(`${endpoint}/musikere/db/${musicianID}.json`);
+    const response = await fetch(`${endpoint}/musikere/backend/db/${musicianID}.json`);
     if (response.ok) {
         const musician = await response.json();
         
@@ -84,23 +83,19 @@ export function prepareData(obj) {
 /* ========== UPDATE ========== */
 // Sends put request to endpoint with musician object
  export async function updateMusician(musician, musicianID, endpoint) {
-    const response = await fetch(`${endpoint}musicians/${musicianID}.json`, {
+    const response = await fetch(`${endpoint}/Musikere/backend/db/${musicianID}.json`, {
     method: "PUT",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(musician),
     });
     if (response.ok) {
-        console.log("musician updated successfully!");
-        showToastMessage("musician updated successfully!", "success");
-    } else {
-        showToastMessage(`Oops something went wrong. ${response.status} ${response.statusText}.`, "error");
-        console.error(`Bad response at updateMusician: ${response.status} ${response.statusText}.`);
+        console.log("musiker opdateret :o)")
     }
 }
 
 /* ========== DELETE ========== */
  export async function deleteMusician(musicianID, endpoint) {
-    const response = await fetch(`${endpoint}/musicians/${musicianID}.json`, {
+    const response = await fetch(`${endpoint}/Musikere/backend/db/0${musicianID}`, {
         method: "DELETE",
     });
     if (response.ok) {

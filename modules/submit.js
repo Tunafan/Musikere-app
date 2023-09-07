@@ -1,6 +1,4 @@
 import { addMusician, deleteMusician, endpoint, updateMusician } from "./app.js";
-import { validatePassword } from "./validation.js";
-import { showToastMessage } from "./toastMessage.js";
 
 /* ========== SUBMIT CREATE ========== */
 export async function submitCreateForm(event) {
@@ -10,7 +8,7 @@ export async function submitCreateForm(event) {
         image: form.image.value,
         stageName: form.stageName.value,
         name: form.name.value,
-        DOB: form.DOB.value,
+        dateOfBirth: form.dateOfBirth.value,
         genre: form.genre.value,
         musicLabel: form.musicLabel.value,
         activeSince: form.activeSince.value,
@@ -31,8 +29,8 @@ export async function submitUpdateForm(event) {
     const musician = {
         image: form.image.value,
         stageName: form.stageName.value,
-        name: form.name.value,
-        DOB: form.DOB.value,
+        fullName: form.fullName.value,
+        dateOfBirth: form.dateOfBirth.value,
         genre: form.genre.value,
         musicLabel: form.musicLabel.value,
         activeSince: form.activeSince.value,
@@ -51,16 +49,11 @@ export async function deleteMusicianClicked(event) {
     const deleteForm = document.querySelector("#deleteForm");
     const musicianID = deleteForm.querySelector("#delete-musicianID").textContent;
 
-    if (validatePassword(deleteForm["password"].value)) {
-        await submitDeleteForm(musicianID);
-    } else {
-        showToastMessage("NO", "error");
-    }
+   submitDeleteForm(musicianID);
 }
 async function submitDeleteForm(musicianID) {
     const deleteForm = document.querySelector("#deleteForm");
     deleteForm.removeEventListener("submit", deleteMusicianClicked);
     deleteForm.parentElement.close();
-    deleteForm.password.value = "";
     await deleteMusician(musicianID, endpoint);
 }

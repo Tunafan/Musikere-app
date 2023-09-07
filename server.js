@@ -8,16 +8,16 @@ app.use(express.json());
 
 app.use(cors());
 
+app.get('/',  (req, res) => {
+  
+    res.json("lol");
+});
 
-
-app.get('/musikere/db', async (req, res) => {
-    const data = await fs.readFile('db/musicians.json');
+app.get('/musikere/backend/db', async (req, res) => {
+    const data = await fs.readFile('./backend/db/musicians.json');
     const artists = JSON.parse(data);
     res.json(artists);
 });
-
-
-
 
 
 const port = 1312;

@@ -6,10 +6,10 @@ export async function sortMusicians(event) {
     function sortBy(a,b) {
         if (select.value === "likes") {
             return b.likes-a.likes;
-        } else if (select.value === "name") {
-            return a.name.localeCompare(b.name);
-        } else if (select.value === "DOB") {
-            return a.DOB.localeCompare(b.DOB);
+        } else if (select.value === "fullName") {
+            return a.fullName.localeCompare(b.fullName);
+        } else if (select.value === "dateOfBirth") {
+            return a.dateOfBirth.localeCompare(b.dateOfBirth);
         }
     }
     musicianArr.sort(sortBy)

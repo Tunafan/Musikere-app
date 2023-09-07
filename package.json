@@ -4,7 +4,9 @@
   "description": "folder of the back end",
   "main": "server.js",
   "type": "module",
-  "scripts": {},
+  "scripts": {
+    "start": "node --watch server.js"
+  },
   "author": "Lars",
   "license": "ISC",
   "dependencies": {
